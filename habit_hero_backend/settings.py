@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-(s7-56=jm11-@@87tizebs^_mrjl6v$hv*m0w_d8+6+^o-)!9q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -53,14 +53,6 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-
-CORS_ALLOWED_ORIGINS = [
-    "https://habit-hero-frontend.vercel.app",
-]
-
-
-CORS_ALLOW_ALL_ORIGINS = True  # allow frontend to talk to backend
-
 
 ROOT_URLCONF = "habit_hero_backend.urls"
 
@@ -133,3 +125,7 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+]
